@@ -26,6 +26,6 @@ urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')),
     
     #!myUrls
-    path('flights/',include('flightApp.urls'))
+    path('',include('flightApp.urls'))
     
 ]
