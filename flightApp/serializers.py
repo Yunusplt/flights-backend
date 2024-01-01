@@ -12,6 +12,10 @@ class FlightSerializer(serializers.ModelSerializer):
     
     def get_total_price(self,obj):
         return round((obj.price * obj.tax) + obj.fee)
+    
+        
+    
+
 
 
 
@@ -31,4 +35,6 @@ class ReservationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Reservation
         fields="__all__"
+            
+        
 

@@ -5,8 +5,8 @@ from django.db import models
 class Flight(models.Model):
     airline=models.CharField(max_length=20)
     flight_number=models.CharField(max_length=10)
-    departure_time=models.DateTimeField()
-    arrival_time=models.DateTimeField()
+    departure_time=models.TimeField()
+    arrival_time=models.TimeField()
     price=models.BigIntegerField()
     # price = models.DecimalField(max_digits=10, decimal_places=2)
     tax = models.DecimalField(max_digits=10, decimal_places=2)
