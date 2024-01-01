@@ -1,6 +1,5 @@
 from django.db import models
 
-# Create your models here.
 
 class Flight(models.Model):
     airline=models.CharField(max_length=20)
@@ -8,15 +7,12 @@ class Flight(models.Model):
     departure_time=models.TimeField()
     arrival_time=models.TimeField()
     price=models.BigIntegerField()
-    # price = models.DecimalField(max_digits=10, decimal_places=2)
     tax = models.DecimalField(max_digits=10, decimal_places=2)
     fee = models.IntegerField()
-    travelType = models.CharField(max_length=10)
-    stopAmount = models.PositiveIntegerField(default=0)
-    #! burada 0 olmasi sorun olabilir dikkat
-    stopPlace = models.CharField(max_length=100, blank=True, null=True)
-    stopDuration = models.DurationField(blank=True, null=True)
-    #! durationField dikkat
+    travel_type = models.CharField(max_length=10)
+    stop_amount = models.PositiveIntegerField(default=0)
+    stop_place = models.CharField(max_length=100, blank=True, null=True)
+    stop_duration = models.DurationField(blank=True, null=True)
 
     def __str__(self):
         return f"{self.airline} - {self.flight_number}"
@@ -32,9 +28,9 @@ class Passenger(models.Model):
     def __str__(self):
         return f"{self.name} {self.surname}"
     
+    
 class Reservation(models.Model):
     passenger=models.ForeignKey(Passenger, on_delete=models.CASCADE)
-    #passenger=models.ManyToManyField(Passenger, related_name="reservation")       #!manytomanyField extra tablo olusturur. db e bak
     flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
 
     def __str__(self):

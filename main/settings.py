@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     #! 3rdPartyApps
     'rest_framework',
     'drf_yasg',
-    'debug_toolbar',                                            #! delete in production
+    'debug_toolbar',       #! delete in production
     'corsheaders',         #! cors-header for connection between Django and React
 
     #! MyApps
@@ -136,7 +136,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-TIME_INPUT_FORMATS = ('%I:%M %p',)
+TIME_INPUT_FORMATS = ('%I:%M %p',)          #! time format was changed
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

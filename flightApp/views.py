@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .serializers import Flight,Passenger,Reservation,FlightSerializer,PassengerSerializer,ReservationSerializer
 from rest_framework import viewsets
-# Create your views here.
+
 
 
 class FlightView(viewsets.ModelViewSet):
