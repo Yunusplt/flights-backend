@@ -141,6 +141,7 @@ TIME_INPUT_FORMATS = ('%I:%M %p',)          #! time format was changed
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
+#! 146-149 pythonanywhere
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / STATIC_URL
 # STATICFILES_DIRS = [BASE_DIR / STATIC_URL]
