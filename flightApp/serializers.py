@@ -22,8 +22,11 @@ class PassengerSerializer(serializers.ModelSerializer):
 class ReservationSerializer(serializers.ModelSerializer):
     # flight= serializers.StringRelatedField()  
     # passenger = serializers.StringRelatedField()  
+    passenger_id=serializers.IntegerField()
     passenger = PassengerSerializer(read_only=True)
-    flight = FlightSerializer(read_only=True)       
+    flight_id=serializers.IntegerField()  
+    flight = FlightSerializer(read_only=True)
+         
 
     class Meta:
         model = Reservation
