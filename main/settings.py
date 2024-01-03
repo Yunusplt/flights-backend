@@ -87,24 +87,24 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
  #! delete in production and use below database
-# DATABASES = {                                          
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-DATABASES = {
+DATABASES = {                                          
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': config("SQL_DATABASE"),
-        'USER': config("SQL_USER"),
-        'PASSWORD': config("SQL_PASSWORD"),
-        'HOST': config("SQL_HOST"),
-        'PORT': config("SQL_PORT"),
-        'ATOMIC_REQUEST': True,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': config("SQL_DATABASE"),
+#         'USER': config("SQL_USER"),
+#         'PASSWORD': config("SQL_PASSWORD"),
+#         'HOST': config("SQL_HOST"),
+#         'PORT': config("SQL_PORT"),
+#         'ATOMIC_REQUEST': True,
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
